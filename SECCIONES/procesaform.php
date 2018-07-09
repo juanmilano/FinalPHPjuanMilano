@@ -1,0 +1,2 @@
+<?php
+compruebaForm($_POST);

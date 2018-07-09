@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-title {
+    margin-top: 3em;
+    font-size: 36px;
+    color: #0f52ba;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+    animation-name: rebotar;
+    animation-duration: 4s;
+}
+
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+    color: #0f52ba;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+.galeria {
+    display: inline-block;
+}
+
+.contenedor-gal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-gal {
+    max-width: 30%;
+}
+
+
+
+.item-gal img {
+    width: 100%;
+    margin: 1em;
+    margin-right: 1em;
+}
+
