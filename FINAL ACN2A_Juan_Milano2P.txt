@@ -1,0 +1,7 @@
+Alumno: Juan Ignacio Milano.
+Final Programación Web 2. 
+Carrera: Analista de Sistemas.
+comisión: ACN2A
+Navegador: Google Chrome en macOS High Sierra.
+Navegador 2: Firefox Developer Edition
+Cantidad de hs aprox: 3hs. 
