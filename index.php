@@ -14,8 +14,7 @@ require_once("config.php");
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-  
-    
+    <script src="js/jquery-3.3.1.min.js"></script>  
     </head>
     <?php
     if (isset($_GET['seccion'])){
@@ -50,12 +49,10 @@ require_once("config.php");
                 case 'platos':
                 case 'contacto':
                 case 'conoceme':
-                case 'gracias':
                 case 'graciaslanding':
                 case 'procesaform':
                 case 'procesa-landing':
                 case 'landing':
-                case 'errorform':
                 case 'errorlanding':
                     include('SECCIONES/'.$secc.'.php');
                 break;

@@ -7,7 +7,6 @@ $phone = trim($campo['phone']);
 $message = htmlentities(nl2br(trim($_POST['message'])));
 $fiesta = isset($campo['fiesta']) ? serialize($campo['fiesta']) : '';
 
-
 $formulario = [];
 $formulario  = [
 	"name" => $name,
@@ -18,19 +17,15 @@ $formulario  = [
 
 ];
 
-header("Content-Type: application/json; charset=UTF-8");
-$formularioJSON = json_encode($formulario);
-
-file_put_contents("formulario.json",$formularioJSON);
-
-$datosRecibidos = "&quenombre=$formulario[name]&queemail=$formulario[email]&quephone=$formulario[phone]&quefiesta=$formulario[fiesta]&quemensaje=$formulario[message]";
-
 if (empty($formulario['name']) || empty($formulario['email']) || empty($formulario['phone']) || empty($formulario['message'])){
-    header("Location:index.php?seccion=errorform&datosRecibidos=$datosRecibidos");
+    header("Location:SECCIONES/errorform.php");
     die;
 }else{
-    header("Location:index.php?seccion=gracias&datosRecibidos=$datosRecibidos");
-    die;
+	header("Content-Type: application/json; charset=UTF-8");
+	$formularioJSON = json_encode($formulario);
+	file_put_contents("formulario.json",$formularioJSON);
+    header("Location:SECCIONES/gracias.php");
+
 }}
 
 

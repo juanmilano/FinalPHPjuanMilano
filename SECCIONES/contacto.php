@@ -1,3 +1,10 @@
+
+<script>
+    $(document).ready(function(){
+       
+        console.log("El formulario está listo");
+    })
+</script>   
 <section class="primary" id="contact">
         <div class="container">
             <div class="row">
@@ -8,7 +15,7 @@
                     </div>
                   </div>
                 </div>
-
+                <div id="Msj"></div>
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
@@ -59,4 +66,34 @@
                 </div>
             </div>
         </div>
+            <script>
+     
+ $("#contactForm").submit(function(e){
+     e.preventDefault();
+     
+     var queurl = $(this).attr('action');
+     var quedata = $(this).serialize();
+     
+     var peticion = $.ajax({         
+         type : 'POST',
+         url :  queurl,
+         data: quedata,
+     })
+     .done(function(respuesta){
+         
+         $("#Msj").html(respuesta)
+         .hide()
+         .fadeIn();
+     })
+     .fail(function(){
+         console.log("error");
+     })
+     .always(function(){
+         console.log("completó la petición");
+         
+     });
+     
+     
+ });
+</script>
     </section>
